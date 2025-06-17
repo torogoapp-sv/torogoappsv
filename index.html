@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Torogosv - La app de delivery más rápida y confiable. Comida, mensajería y más entregados al instante." />
+  <title>Torogosv - Delivery Rápido y Confiable</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/src/main.css" />
+</head>
+
+<body>
+  <!-- Scroll to top button -->
+  <button id="scrollTop" class="scroll-top bg-toro-red text-white p-3 rounded-full shadow-lg">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white shadow-md relative">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <!-- Logo con el pájaro y el casco -->
+        <div class="relative">
+          <div class="w-12 h-12 rounded-full bg-toro-green flex items-center justify-center">
+            <div class="w-8 h-8 rounded-full bg-toro-yellow"></div>
+          </div>
+          <div class="absolute -top-1 -right-1 w-6 h-6 bg-toro-red rounded-full flex items-center justify-center">
+            <div class="w-3 h-3 bg-white rounded-full"></div>
+          </div>
+          <div class="absolute bottom-0 right-0 bg-toro-red text-white text-xs font-bold px-2 py-1 rounded">
+            GO
+          </div>
+        </div>
+        <h1 class="text-2xl font-bold ml-3 text-toro-dark">TOROGOSV</h1>
+      </div>
+
+      <nav class="hidden md:flex space-x-8">
+        <a href="#features" class="text-toro-dark hover:text-toro-green font-medium">Beneficios</a>
+        <a href="#how-it-works" class="text-toro-dark hover:text-toro-green font-medium">Cómo Funciona</a>
+        <a href="#benefits" class="text-toro-dark hover:text-toro-green font-medium">Ventajas</a>
+        <a href="#faq" class="text-toro-dark hover:text-toro-green font-medium">Preguntas</a>
+        <a href="#contact" class="text-toro-dark hover:text-toro-green font-medium">Contacto</a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <button class="bg-toro-green text-white px-4 py-2 rounded-full font-medium hidden md:block">
+          Iniciar Sesión
+        </button>
+        <button id="mobileMenuButton" class="md:hidden text-toro-dark">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+
+      <!-- Menú móvil mejorado -->
+      <div id="mobileMenu" class="mobile-menu md:hidden absolute top-full left-0 right-0 bg-white shadow-lg">
+        <a href="#features" class="block px-4 py-3 text-toro-dark">Beneficios</a>
+        <a href="#how-it-works" class="block px-4 py-3 text-toro-dark">Cómo Funciona</a>
+        <a href="#benefits" class="block px-4 py-3 text-toro-dark">Ventajas</a>
+        <a href="#faq" class="block px-4 py-3 text-toro-dark">Preguntas</a>
+        <a href="#contact" class="block px-4 py-3 text-toro-dark">Contacto</a>
+        <button class="w-full text-left px-4 py-3 bg-toro-green text-white font-medium">
+          Iniciar Sesión
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-bg py-20 md:py-28">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-12 md:mb-0">
+        <div class="mb-2">
+          <span class="bg-toro-green bg-opacity-20 text-toro-green font-bold py-1 px-4 rounded-full text-sm">¡Próximo
+            lanzamiento!</span>
+        </div>
+
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-toro-dark">
+          Tu comida favorita,
+          <span class="text-toro-green">entregada al instante</span>
+        </h1>
+
+        <p class="text-lg text-gray-600 mb-8 max-w-lg">
+          Torogosv conecta los mejores restaurantes y tiendas con tu puerta.
+          Disfruta de entregas súper rápidas, seguimiento en tiempo real y una
+          experiencia sin complicaciones.
+        </p>
+
+        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+          <!-- Botón convertido en enlace con mismo estilo -->
+          <a href="#contact"
+            class="btn-primary text-white font-bold py-3 px-8 rounded-full text-lg flex items-center justify-center cursor-pointer">
+            <i class="fas fa-bell mr-2"></i> Notificarme el lanzamiento
+          </a>
+
+          <button
+            class="bg-white text-toro-dark font-bold py-3 px-8 rounded-full text-lg border-2 border-toro-light hover:border-toro-green transition flex items-center justify-center">
+            <i class="fas fa-handshake mr-2"></i> Trabajar con nosotros
+          </button>
+        </div>
+
+        <div class="mt-10 bg-toro-light p-4 rounded-xl border border-toro-green border-opacity-30">
+          <p class="text-toro-dark font-medium">
+            <i class="fas fa-info-circle text-toro-green mr-2"></i> ¡Sé de los
+            primeros en probar nuestra app! Regístrate para recibir acceso
+            anticipado.
+          </p>
+        </div>
+      </div>
+
+      <div class="md:w-1/2 flex justify-center relative">
+        <div class="mobile-screen w-72 h-[550px] bg-white relative overflow-hidden floating">
+          <div class="absolute top-0 left-0 right-0 h-12 bg-toro-green flex items-center justify-center">
+            <div class="w-8 h-8 rounded-full bg-toro-yellow flex items-center justify-center">
+              <i class="fas fa-bolt text-white text-sm"></i>
+            </div>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 h-12 bg-toro-light flex items-center justify-center space-x-12">
+            <i class="fas fa-home text-toro-dark"></i>
+            <i class="fas fa-search text-toro-dark"></i>
+            <div class="w-10 h-10 bg-toro-green rounded-full flex items-center justify-center -mt-6">
+              <i class="fas fa-shopping-bag text-white"></i>
+            </div>
+            <i class="fas fa-heart text-toro-dark"></i>
+            <i class="fas fa-user text-toro-dark"></i>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=768&q=80"
+            alt="App interface" class="w-full h-full object-cover" />
+        </div>
+
+        <div class="absolute -bottom-8 -left-8 w-24 h-24 bg-toro-yellow rounded-full opacity-20"></div>
+        <div class="absolute -top-8 -right-8 w-32 h-32 bg-toro-red rounded-full opacity-20"></div>
+        <div class="absolute top-1/4 -left-10 w-16 h-16 bg-toro-green rounded-full opacity-20"></div>
+
+        <!-- Elemento decorativo -->
+        <div
+          class="absolute -bottom-12 right-0 bg-toro-red text-white px-4 py-2 rounded-lg shadow-lg transform rotate-3">
+          <i class="fas fa-clock mr-2"></i> ¡Entregas en menos de 30 min!
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20 feature-bg">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-toro-dark">
+          Por qué elegir Torogosv
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          La solución de delivery más rápida y confiable con beneficios
+          exclusivos para todos
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Feature 1 -->
+        <div
+          class="feature-card bg-white p-8 rounded-2xl shadow-lg text-center transition-all duration-300 hover:shadow-xl">
+          <div class="w-20 h-20 bg-toro-green bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="feature-icon fas fa-bolt text-3xl text-toro-green"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-toro-dark">
+            Entrega Express
+          </h3>
+          <p class="text-gray-600">
+            Recibe tus pedidos en menos de 30 minutos con nuestro servicio
+            prioritario.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div
+          class="feature-card bg-white p-8 rounded-2xl shadow-lg text-center transition-all duration-300 hover:shadow-xl">
+          <div class="w-20 h-20 bg-toro-red bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="feature-icon fas fa-map-marker-alt text-3xl text-toro-red"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-toro-dark">
+            Seguimiento en Vivo
+          </h3>
+          <p class="text-gray-600">
+            Sigue a tu repartidor en tiempo real desde la app hasta tu puerta.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div
+          class="feature-card bg-white p-8 rounded-2xl shadow-lg text-center transition-all duration-300 hover:shadow-xl">
+          <div
+            class="w-20 h-20 bg-toro-yellow bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="feature-icon fas fa-utensils text-3xl text-toro-yellow"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-toro-dark">
+            +500 Restaurantes
+          </h3>
+          <p class="text-gray-600">
+            Amplia selección de los mejores restaurantes y tiendas de tu
+            ciudad.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div
+          class="feature-card bg-white p-8 rounded-2xl shadow-lg text-center transition-all duration-300 hover:shadow-xl">
+          <div class="w-20 h-20 bg-toro-green bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="feature-icon fas fa-shield-alt text-3xl text-toro-green"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-toro-dark">Pago Seguro</h3>
+          <p class="text-gray-600">
+            Transacciones 100% seguras con múltiples opciones de pago
+            disponibles.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works -->
+  <section id="how-it-works" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-toro-dark">
+          Así de fácil es usar Torogosv
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Tu satisfacción en solo tres pasos
+        </p>
+      </div>
+
+      <div class="delivery-process max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+          <!-- Step 1 -->
+          <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+            <div
+              class="w-16 h-16 bg-toro-green rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
+              1
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-toro-dark">
+              Descarga la App
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Disponible en iOS y Android. Regístrate en segundos.
+            </p>
+            <div class="w-16 h-16 mx-auto bg-gray-100 rounded-2xl flex items-center justify-center">
+              <i class="fas fa-mobile-alt text-3xl text-toro-green"></i>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+            <div
+              class="w-16 h-16 bg-toro-yellow rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
+              2
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-toro-dark">
+              Elige tu pedido
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Explora cientos de opciones y personaliza tu pedido.
+            </p>
+            <div class="w-16 h-16 mx-auto bg-gray-100 rounded-2xl flex items-center justify-center">
+              <i class="fas fa-search text-3xl text-toro-yellow"></i>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+            <div
+              class="w-16 h-16 bg-toro-red rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
+              3
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-toro-dark">Disfruta</h3>
+            <p class="text-gray-600 mb-4">
+              Recibe tu pedido caliente y listo para disfrutar.
+            </p>
+            <div class="w-16 h-16 mx-auto bg-gray-100 rounded-2xl flex items-center justify-center">
+              <i class="fas fa-smile text-3xl text-toro-red"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-20 text-center">
+        <div class="inline-flex space-x-4">
+          <button class="btn-secondary text-white font-bold py-4 px-10 rounded-full text-lg flex items-center">
+            <i class="fab fa-apple mr-3 text-xl"></i> App Store
+          </button>
+          <button class="bg-toro-dark text-white font-bold py-4 px-10 rounded-full text-lg flex items-center">
+            <i class="fab fa-google-play mr-3 text-xl"></i> Google Play
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="benefits" class="py-20 bg-toro-light">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-toro-dark section-title">
+          Beneficios de ToroGosv
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Descubre cómo transformaremos tu experiencia de delivery
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <!-- Beneficio 1 -->
+        <div class="benefit-card p-8 relative">
+          <div class="benefit-number">1</div>
+          <div class="benefit-icon text-toro-green">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-center text-toro-dark">
+            Entregas rápidas y eficientes
+          </h3>
+          <p class="text-gray-600 text-center">
+            ToroGosv está diseñado para ofrecer un servicio de entregas ágil,
+            asegurando que tus pedidos lleguen en el menor tiempo posible.
+          </p>
+        </div>
+
+        <!-- Beneficio 2 -->
+        <div class="benefit-card p-8 relative">
+          <div class="benefit-number">2</div>
+          <div class="benefit-icon text-toro-blue">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-center text-toro-dark">
+            Cobertura estratégica
+          </h3>
+          <p class="text-gray-600 text-center">
+            Nos enfocamos en conectar negocios y clientes en diversas áreas,
+            ofreciendo una red optimizada para facilitar cada entrega.
+          </p>
+        </div>
+
+        <!-- Beneficio 3 -->
+        <div class="benefit-card p-8 relative">
+          <div class="benefit-number">3</div>
+          <div class="benefit-icon text-toro-red">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-center text-toro-dark">
+            Seguridad y confianza
+          </h3>
+          <p class="text-gray-600 text-center">
+            Cada pedido se maneja con responsabilidad, asegurando que los
+            productos lleguen en óptimas condiciones y sin inconvenientes.
+          </p>
+        </div>
+
+        <!-- Beneficio 4 -->
+        <div class="benefit-card p-8 relative">
+          <div class="benefit-number">4</div>
+          <div class="benefit-icon text-toro-yellow">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-center text-toro-dark">
+            Facilidad de uso
+          </h3>
+          <p class="text-gray-600 text-center">
+            Desde la solicitud hasta la entrega, ToroGosv ofrece una
+            experiencia intuitiva y sencilla para que cualquier usuario pueda
+            aprovechar el servicio sin complicaciones.
+          </p>
+        </div>
+
+        <!-- Beneficio 5 -->
+        <div class="benefit-card p-8 relative">
+          <div class="benefit-number">5</div>
+          <div class="benefit-icon text-toro-purple">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-center text-toro-dark">
+            Oportunidades para negocios
+          </h3>
+          <p class="text-gray-600 text-center">
+            Abre nuevas oportunidades de crecimiento para restaurantes y
+            tiendas que buscan optimizar su alcance y ganancias.
+          </p>
+        </div>
+
+        <!-- Beneficio 6 -->
+        <div class="benefit-card p-8 relative">
+          <div class="benefit-number">6</div>
+          <div class="benefit-icon text-toro-orange">
+            <i class="fas fa-motorcycle"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-center text-toro-dark">
+            Oportunidades para repartidores
+          </h3>
+          <p class="text-gray-600 text-center">
+            Ofrecemos flexibilidad y buenos ingresos para repartidores que
+            quieran unirse a nuestra plataforma.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-toro-dark">
+          Preguntas Frecuentes
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Todo lo que necesitas saber sobre Torogosv
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto">
+        <!-- FAQ 1 -->
+        <div class="faq-item bg-toro-light mb-4 rounded-lg overflow-hidden">
+          <button class="w-full text-left p-6 font-medium text-lg flex justify-between items-center">
+            <span>¿Cuánto cuesta el servicio de entrega?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="px-6 pb-6 hidden">
+            <p class="text-gray-600">
+              El costo de entrega varía según la distancia y la demanda en ese
+              momento. Puedes ver el costo exacto antes de confirmar tu pedido
+              en la app.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item bg-toro-light mb-4 rounded-lg overflow-hidden">
+          <button class="w-full text-left p-6 font-medium text-lg flex justify-between items-center">
+            <span>¿Cómo puedo pagar mi pedido?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="px-6 pb-6 hidden">
+            <p class="text-gray-600">
+              Aceptamos múltiples métodos de pago: tarjeta de crédito/débito,
+              PayPal, y efectivo al momento de la entrega.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item bg-toro-light mb-4 rounded-lg overflow-hidden">
+          <button class="w-full text-left p-6 font-medium text-lg flex justify-between items-center">
+            <span>¿Puedo programar entregas para más tarde?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="px-6 pb-6 hidden">
+            <p class="text-gray-600">
+              Sí! Puedes programar entregas hasta con 48 horas de
+              anticipación. Selecciona la opción "Programar entrega" al hacer
+              tu pedido.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item bg-toro-light mb-4 rounded-lg overflow-hidden">
+          <button class="w-full text-left p-6 font-medium text-lg flex justify-between items-center">
+            <span>¿Qué hago si tengo un problema con mi pedido?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="px-6 pb-6 hidden">
+            <p class="text-gray-600">
+              Contáctanos inmediatamente a través de la app o nuestro soporte
+              al cliente. Resolveremos cualquier inconveniente en menos de 24
+              horas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-gradient-to-r from-toro-green to-toro-dark relative overflow-hidden">
+    <!-- Elementos decorativos -->
+    <div class="absolute top-0 left-0 w-full h-full opacity-5">
+      <div class="absolute top-20 left-10 w-24 h-24 rounded-full bg-white"></div>
+      <div class="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-white"></div>
+      <div class="absolute top-1/3 right-1/4 w-16 h-16 rounded-full bg-white"></div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="form-container">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+          <!-- Formulario -->
+          <div class="form-section">
+            <div class="text-center mb-8">
+              <div class="inline-block bg-toro-green text-white font-bold py-1 px-4 rounded-full mb-4">
+                <i class="fas fa-hourglass-half mr-2"></i> Próximamente
+              </div>
+              <h2 class="text-2xl md:text-3xl font-bold mb-3 text-toro-dark">
+                Sé el primero en probar ToroGosv
+              </h2>
+              <p class="text-gray-600">
+                Regístrate ahora y recibe una notificación exclusiva cuando
+                lancemos nuestra aplicación, además de un descuento especial
+                para tu primer pedido.
+              </p>
+            </div>
+
+            <form id="registration-form" class="space-y-5">
+              <!-- Nombre completo -->
+              <div>
+                <label class="block text-toro-dark font-medium mb-2">Nombre completo</label>
+                <div class="relative">
+                  <i class="fas fa-user form-icon"></i>
+                  <input type="text" id="fullname" name="fullname" placeholder="Tu nombre completo"
+                    class="w-full px-4 py-3 pl-12 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-toro-green"
+                    required />
+                </div>
+              </div>
+
+              <!-- Correo electrónico -->
+              <div>
+                <label class="block text-toro-dark font-medium mb-2">Correo electrónico</label>
+                <div class="relative">
+                  <i class="fas fa-envelope form-icon"></i>
+                  <input type="email" id="email" name="email" placeholder="tu@email.com"
+                    class="w-full px-4 py-3 pl-12 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-toro-green"
+                    required />
+                </div>
+              </div>
+
+              <!-- Teléfono -->
+              <div>
+                <label class="block text-toro-dark font-medium mb-2">Teléfono</label>
+                <div class="relative">
+                  <i class="fas fa-phone-alt form-icon"></i>
+                  <input type="tel" id="phone" name="phone" placeholder="(503) 1234-5678"
+                    class="w-full px-4 py-3 pl-12 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-toro-green"
+                    required />
+                </div>
+              </div>
+
+              <!-- Tipo de usuario -->
+              <div>
+                <label class="block text-toro-dark font-medium mb-2">Tipo de usuario</label>
+                <div class="space-y-3">
+                  <label class="flex items-center">
+                    <input type="checkbox" name="userType" value="cliente"
+                      class="form-checkbox h-5 w-5 text-toro-green rounded focus:ring-toro-green" />
+                    <span class="ml-3 text-gray-700">Cliente</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" name="userType" value="repartidor"
+                      class="form-checkbox h-5 w-5 text-toro-green rounded focus:ring-toro-green" />
+                    <span class="ml-3 text-gray-700">Repartidor</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" name="userType" value="negocio"
+                      class="form-checkbox h-5 w-5 text-toro-green rounded focus:ring-toro-green" />
+                    <span class="ml-3 text-gray-700">Negocio</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Botón de registro -->
+              <button type="submit" id="submit-btn"
+                class="btn-primary w-full text-white font-bold py-4 px-8 rounded-full text-lg mt-6">
+                Registrarme
+              </button>
+            </form>
+          </div>
+
+          <!-- Beneficios -->
+          <div class="benefits-section">
+            <h3 class="text-xl font-bold mb-6 text-toro-dark">
+              Beneficios Exclusivos
+            </h3>
+
+            <ul class="space-y-4">
+              <li class="benefit-item">
+                <i class="fas fa-check-circle benefit-icon-check"></i>
+                <span>Descuento en tu primer pedido</span>
+              </li>
+              <li class="benefit-item">
+                <i class="fas fa-check-circle benefit-icon-check"></i>
+                <span>Acceso anticipado a nuevas funciones</span>
+              </li>
+              <li class="benefit-item">
+                <i class="fas fa-check-circle benefit-icon-check"></i>
+                <span>Promociones especiales solo para usuarios registrados</span>
+              </li>
+              <li class="benefit-item">
+                <i class="fas fa-check-circle benefit-icon-check"></i>
+                <span>Soporte prioritario 24/7</span>
+              </li>
+            </ul>
+
+            <!-- Elemento decorativo -->
+            <div class="mt-8 relative">
+              <div class="absolute -top-8 -right-8 w-24 h-24 bg-toro-green rounded-full opacity-10"></div>
+              <div class="absolute bottom-0 left-0 w-16 h-16 bg-toro-red rounded-full opacity-10"></div>
+
+              <div class="bg-white p-4 rounded-xl border border-toro-green border-opacity-30 relative z-10">
+                <p class="text-toro-dark">
+                  <i class="fas fa-lock text-toro-green mr-2"></i> Tus datos
+                  están protegidos y solo los usaremos para notificarte sobre
+                  el lanzamiento.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-toro-dark text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Logo and description -->
+        <div>
+          <div class="flex items-center mb-6">
+            <div class="relative">
+              <div class="w-12 h-12 rounded-full bg-toro-green flex items-center justify-center">
+                <div class="w-8 h-8 rounded-full bg-toro-yellow"></div>
+              </div>
+              <div class="absolute -top-1 -right-1 w-6 h-6 bg-toro-red rounded-full flex items-center justify-center">
+                <div class="w-3 h-3 bg-white rounded-full"></div>
+              </div>
+              <div class="absolute bottom-0 right-0 bg-toro-red text-white text-xs font-bold px-2 py-1 rounded">
+                GO
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold ml-3">TOROGOSV</h3>
+          </div>
+          <p class="text-gray-300 mb-6">
+            La app de delivery más rápida y confiable, llevando tus pedidos
+            favoritos a tu puerta.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h4 class="text-lg font-bold mb-6">Enlaces Rápidos</h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white">Inicio</a>
+            </li>
+            <li>
+              <a href="#features" class="text-gray-300 hover:text-white">Beneficios</a>
+            </li>
+            <li>
+              <a href="#how-it-works" class="text-gray-300 hover:text-white">Cómo Funciona</a>
+            </li>
+            <li>
+              <a href="#benefits" class="text-gray-300 hover:text-white">Ventajas</a>
+            </li>
+            <li>
+              <a href="#faq" class="text-gray-300 hover:text-white">Preguntas Frecuentes</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="text-lg font-bold mb-6">Contáctanos</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3 text-toro-green"></i>
+              <span class="text-gray-300">Av. Principal #123, San Salvador</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-phone-alt mt-1 mr-3 text-toro-green"></i>
+              <span class="text-gray-300">+503 2222-3333</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-envelope mt-1 mr-3 text-toro-green"></i>
+              <span class="text-gray-300">soporte@torogosv.com</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h4 class="text-lg font-bold mb-6">Newsletter</h4>
+          <p class="text-gray-300 mb-4">
+            Suscríbete para recibir promociones exclusivas.
+          </p>
+          <form class="flex">
+            <input type="email" placeholder="Tu correo"
+              class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800" />
+            <button class="bg-toro-red px-4 rounded-r-lg">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+        <p>&copy; 2023 Torogosv. Todos los derechos reservados.</p>
+      </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/firebase.js"></script>
+  <script type="module" src="/src/formHandler.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+# Dependencias
+node_modules/
+
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+
+# Archivos de construcción
+dist/
+.vite/
+.cache/
+
+# Archivos del sistema
+.DS_Store
+*.log
