@@ -12,17 +12,25 @@ const firebaseConfig = {
   measurementId: "G-M92SQCD3N5",
 };
 
-// Inicializar Firebase
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
+// Inicialización optimizada
+const firebaseApp = initializeApp(firebaseConfig);
+const db = getDatabase(firebaseApp);
 
+// Guarda datos con manejo de errores mejorado
 export async function saveUserData(user) {
   try {
     const usersRef = ref(db, "users");
-    const newUserRef = push(usersRef, user);
-    return { success: true, id: newUserRef.key };
+    await push(usersRef, user);
+    return { success: true };
   } catch (error) {
-    console.error("Error saving user data:", error);
-    return { success: false, error };
+    console.error("Error guardando datos:", error);
+    return { 
+      success: false,
+      errorCode: error.code,
+      errorMessage: error.message
+    };
   }
 }
+
+// Exporta para acceso global si es necesario
+window.firebaseApp = firebaseApp;

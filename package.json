@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "cp .nojekyll dist/ && cp public/favicon.ico dist/",
     "preview": "vite preview"
   },
   "devDependencies": {
