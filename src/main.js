@@ -1,4 +1,6 @@
-import './main.css'
+import './main.css';
+import './firebase';
+import './formHandler'
 // Función para inicializar cuando el DOM esté listo
 function initPage() {
   try {
