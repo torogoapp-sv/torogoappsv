@@ -1,40 +1,36 @@
-import { defineConfig } from 'vite';
-import path from 'path';
-import tailwindcss from 'tailwindcss';
-import autoprefixer from 'autoprefixer';
+import { defineConfig } from "vite";
+import path from "path";
+import tailwindcss from "tailwindcss";
+import autoprefixer from "autoprefixer";
 
 export default defineConfig({
-  base: './', // CAMBIADO A RUTA RELATIVA
-  root: path.resolve(__dirname, ''),
-  publicDir: 'public',
+  base: "/torogoappsv/", // Ruta correcta para GitHub Pages
+  root: path.resolve(__dirname, ""),
+  publicDir: "public",
   build: {
-    outDir: 'dist',
+    outDir: "dist",
     emptyOutDir: true,
-    assetsDir: '.', // ARCHIVOS EN RAÍZ DE DIST
+    assetsDir: ".", // Coloca los assets en la raíz de dist
     rollupOptions: {
-      input: path.resolve(__dirname, 'index.html'),
-      // AÑADIDO: Configuración para eliminar hashes
+      input: path.resolve(__dirname, "index.html"),
       output: {
         entryFileNames: `[name].js`,
         chunkFileNames: `[name].js`,
-        assetFileNames: `[name].[ext]`
-      }
-    }
+        assetFileNames: `[name].[ext]`,
+      },
+    },
   },
   server: {
     port: 5173,
     strictPort: true,
     open: true,
     hmr: {
-      overlay: false
-    }
+      overlay: false,
+    },
   },
   css: {
     postcss: {
-      plugins: [
-        tailwindcss(),
-        autoprefixer()
-      ]
-    }
-  }
+      plugins: [tailwindcss(), autoprefixer()],
+    },
+  },
 });
